@@ -1,4 +1,4 @@
-const API_KEY = "756db1321ef4e92044b9a3710180debf";
+const API_KEY = "1d888793ed150af62a11ccd5ba4f3a92";
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('searchButton').addEventListener('click', async () => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             // Step 1: Get latitude and longitude from city name
             cityName.innerHTML = city;
-            const geoResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${API_KEY}`);
+            const geoResponse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${API_KEY}`);
             const geoData = await geoResponse.json();
 
             if (geoData.length === 0) {
