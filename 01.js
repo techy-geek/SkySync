@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const humidity = data.main.humidity;
                 const city = data.name;
 
-                document.querySelector(".Temp").textContent = `Temperature is : ${temp} °C`;
+                document.querySelector(".Temp").textContent = `Temperature is : Math.floor(${temp}) °C`;
                 document.getElementById("wind_speed").textContent = `Wind Speed : ${wind} m/s`;
                 document.getElementById("Humidity").textContent = `Humidity : ${humidity}%`;
                 document.getElementById("cityName").textContent = city;
