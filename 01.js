@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const weatherData = await weatherResponse.json();
 
             // Display weather information in the provided HTML elements
-            document.querySelector('.Temp').innerText = `Temperature is : ${weatherData.main.temp}°C`;
+            document.querySelector('.Temp').innerText = `Temperature is : ${Math.floor(weatherData.main.temp)}°C`;
             document.getElementById('wind_speed').innerText = `Wind Speed : ${weatherData.wind.speed} km/h`;
             document.getElementById('Humidity').innerText = `Humidity : ${weatherData.main.humidity}%`;
 
